@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/css/login.css" rel="stylesheet" type="text/css" />
+    <title>Instagram</title>
+    <link rel="icon" href="/img/favicon.png">
+    <link rel="instagram-icon" href="/img/favicon.png">
+</head>
+<body>
+    <div class="container">
+        <a class="logo" href="/" > <img class="logo_instagram" src="/img/logo_text.png" alt="instagram_logo"></a>
+<!--        <div th:if="${param.status}" th:text="'아이디와 비밀번호를 확인해주세요.'"></div>-->
+        <form action="/login" method="post">
+            <input type="text" class="input_login" id="username" name="username" placeholder="전화번호, 사용자 이름 또는 이메일">
+            <input type="password" class="input_login" id="password" name="password" placeholder="비밀번호">
+            <button type="submit" id="btn_login" >로그인</button>
+        </form>
+        <a class="button_forgot" href="/findPassword">비밀번호를 잊으셨나요?</a>
+    </div>
+    <div class="option">
+        계정이 없으신가요?
+        <a class="option1" href="/members/new">가입하기</a>
+<!--        <a class="option2" href="/members">회원 목록</a>-->
+    </div>
+<!--    <script src="js/login.js"></script>-->
+</body>
+</html>

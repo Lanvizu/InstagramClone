@@ -1,0 +1,10 @@
+.profile-of-article {
+    display: flex;
+    align-items: center;
+}
+.img-profile {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #fafafa;
+    border-radius: 100%;
+}

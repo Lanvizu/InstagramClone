@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+  <title>Instagram</title>
+  <link href="/css/common.css" rel="stylesheet" type="text/css" />
+  <link href="/css/signup.css" rel="stylesheet" type="text/css" />
+  <link href="/css/detail.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="/img/favicon.png">
+  <link rel="instagram-icon" href="/img/favicon.png">
+</head>
+<body>
+<div class="container">
+  <img href="/instagram/page" class="logo_instagram" src="/img/logo_text.png" alt="instagram_logo">
+  <h2 class="detail_h2">회원 상세</h2>
+  <div th:if="${param.status}" th:text="'수정 완료'"></div>
+  <div>
+    <label for="memberId">회원 ID</label>
+    <input type="text" class="input_signup" id="memberId" name="memberId"
+    value="1" th:value="${user.id}" readonly>
+  </div>
+  <div>
+    <label for="memberName">회원 이름</label>
+    <input type="text" class="input_signup" id="memberName" name="memberName"
+           value="홍길동" th:value="${user.username}" readonly>
+  </div>
+  <div>
+    <label for="memberPsw">비밀번호</label>
+    <input type="text" class="input_signup" id="memberPsw" name="memberPsw" readonly>
+<!--           value="1234" th:value="${user.password}" -->
+
+  </div>
+  <div>
+    <label for="memberEmail">email</label>
+    <input type="text" class="input_signup" id="memberEmail" name="memberEmail"
+           value="abc@gmail.com" th:value="${user.email}" readonly>
+  </div>
+  <div>
+    <label for="memberPhone">phone</label>
+    <input type="text" class="input_signup" id="memberPhone" name="memberPhone"
+           value="010-1234-5678" th:value="${user.phone}" readonly>
+  </div>
+  <div>
+    <button  id="btn_login" onclick="location.href='memberEditForm.html'"
+            th:onclick="|location.href='@{/members/member/{memberId}/edit(memberId=${user.id})}'|"
+            type="button">정보 수정</button>
+  </div>
+  <a href="/imageChange" th:href="@{|/members/member/${user.id}/image|}"> 프로필 사진 변경 </a>
+
+</div>
+<div class="option">
+  <a class="option1" href="/instagram/page">메인 화면</a>
+</div>
+</body>
+</html>

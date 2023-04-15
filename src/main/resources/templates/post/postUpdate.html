@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Instagram</title>
+    <link href="/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/css/postUpdate.css" rel="stylesheet" type="text/css" />
+    <!-- favicon -->
+    <link rel="icon" href="/img/favicon.png">
+    <link rel="instagram-icon" href="/img/favicon.png">
+</head>
+
+<body>
+<main>
+    <article>
+        <header>
+            <div class="profile-of-article">
+                <img class="img-profile pic" alt="프로필 사진" th:src="'/img/profile-images/' + ${post.member.memberImage.getOriginalStoreFileName()}">
+                <span class="userID main-id point-span" th:text="${post.member.username}">asdf</span>
+            </div>
+            <div class="main-image" th:each="file : ${post.postFiles}">
+                <img class="mainPic" th:src="@{/storefiles/__${file.getOriginalStoreFileName()}__}" alt="파일주소">
+            </div>
+            <form th:action="@{/posts/update/{postId}(postId=${post.id})}" method="post" enctype="multipart/form-data">
+<!--                <textarea id="text" name="text"></textarea>-->
+                <div class="description">
+                    <label for="text"><textarea id="text" name="text" th:value="${post.text}"></textarea></label>
+                </div>
+
+                <button type="submit" name="action" value="modify">수정</button>
+                <button type="submit" name="action" value="delete">삭제</button>
+            </form>
+        </header>
+    </article>
+</main>
+</body>
+</html>

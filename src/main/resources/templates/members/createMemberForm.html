@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Instagram</title>
+  <link href="/css/common.css" rel="stylesheet" type="text/css" />
+  <link href="/css/signup.css" rel="stylesheet" type="text/css" />
+  <link href="/css/login.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="/img/favicon.png">
+  <link rel="instagram-icon" href="/img/favicon.png">
+</head>
+<body>
+<div class="container">
+  <a class="logo" href="/"><img href="/" class="logo_instagram" src="/img/logo_text.png" alt="instagram_logo"></a>
+    <form action="/members/new" method="post">
+      <input type="text" class="input_signup" id="username" name="username" placeholder="아이디를 입력하세요">
+      <input type="text" class="input_signup" id="password" name="password" placeholder="비밀번호를 입력하세요">
+      <input type="email" class="input_signup" id="email" name="email" placeholder="email을 입력하세요">
+      <input type="phone" class="input_signup" id="phone" name="phone" placeholder="전화번호를 입력하세요">
+    <button type="submit" id="btn_login">가입</button>
+  </form>
+</div>
+<div class="option">
+    계정이 있으신가요?
+    <a class="option1" href="/">로그인</a>
+</div>
+</body>
+</html>

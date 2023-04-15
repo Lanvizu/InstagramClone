@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Instagram</title>
+    <link href="/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/css/main.css" rel="stylesheet" type="text/css" />
+    <!-- favicon -->
+    <link rel="icon" href="/img/favicon.png">
+    <link rel="instagram-icon" href="/img/favicon.png">
+</head>
+<body>
+<!-- navigation -->
+<nav>
+    <div class="nav-container">
+        <div class="nav-1">
+            <a href="/instagram/page"> <img class="logo_instagram_txt" src="/img/logo_text.png" alt="logo_text"></a>
+        </div>
+        <input id="searchInput" type="search" class="input-search" placeholder="검색"/>
+        <div class="nav-2">
+            <a href="/instagram/page"><img src="/img/home.png" alt="홈"></a>
+            <a href="/instagram/page"><img src="/img/dm.png" alt="DM"></a>
+            <a href="/instagram/page"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="탐색"></a>
+            <a href="/instagram/page"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트"></a>
+            <a href="/main/instagram" th:href="@{|/instagram/${user.id}|}"><img class="pic" th:src="'/img/profile-images/' + ${memberImage}"></a>
+        </div>
+    </div>
+</nav>
+<div class="container2"></div>
+    <div class="container">
+        <a href="/members/admin">admin</a>
+        <a href="/members/user">user</a>
+        <a href="/instagram/page">main</a>
+        <a href="/verification">정보 수정</a>
+        <form id="logout" action="/logout" method="POST">
+        <input type="submit" value="로그아웃"/>
+    </form>
+</div>
+</body>
+</html>

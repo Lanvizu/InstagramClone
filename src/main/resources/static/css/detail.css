@@ -1,0 +1,67 @@
+.container {
+    width: 350px;
+    height: 600px;
+    margin: 100px auto 5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border: 1px solid #DBDBDB;
+}
+a.logo{
+    display: flex;
+    align-self: center;
+}
+img.logo_instagram {
+
+    align-self: center;
+    width: 175px;
+    margin: 30px 0;
+}
+.option1{
+    margin: auto 3px;
+    color: cornflowerblue;
+}
+.option2{
+    margin: auto 3px;
+    color: cornflowerblue;
+}
+.option{
+    width: 350px;
+    height: 80px;
+    margin: 0px auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #DBDBDB;
+    font-size: 14px;
+}
+.detail_h2{
+    align-self: center;
+    margin: 10px auto;
+}
+#btn_login {
+    width: 268px;
+    height: 30px;
+    margin: 13px auto;
+    background-color: #0095f6;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+#btn_login:disabled {
+    background-color: #B9DFFC;
+}
+#btn_login:disabled:hover {
+    cursor: default;
+}
+#btn_login:enabled:hover {
+    cursor: pointer;
+}
+#btn_login:focus {
+    outline: none;
+}

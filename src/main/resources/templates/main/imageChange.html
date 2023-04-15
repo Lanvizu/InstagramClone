@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Instagram</title>
+    <link href="/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/css/imageChange.css" rel="stylesheet" type="text/css" />
+    <!-- favicon -->
+    <link rel="icon" href="/img/favicon.png">
+    <link rel="instagram-icon" href="/img/favicon.png">
+</head>
+<body>
+<form method="POST" enctype="multipart/form-data"
+      th:action="@{/members/member/{memberId}/image(memberId=${member.id})}">
+    <!-- 프로필 이미지 -->
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">프로필 이미지</label>
+        <div class="container">
+<!--            <img th:src="@{|/profileImages/${memberImage.storeFileName}.${memberImage.extension}?v=1|}" />-->
+<!--            <img th:src="'/profile-images/'+${memberImage.storeFileName}.${memberImage.extension}" >-->
+<!--            <img th:src="@{'/profile-images/' + ${memberImage.storeFileName} + '.' + ${memberImage.extension}}" >-->
+<!--            <img th:src="'/img/profile-images/' + ${memberImage.storeFileName} + '.' + ${memberImage.extension}">-->
+
+            <img th:src="'/img/profile-images/' + ${memberImage}">
+<!--            <input name="profileImage" type="hidden" th:value="${memberImage}">-->
+        </div>
+        <div class="col-sm-10">
+            <input type="file" name="imageFile" class="form-control-file">
+        </div>
+    </div>
+
+    <!-- Submit 버튼 -->
+        <div>
+            <button type="submit" class="btn btn-primary">변경</button>
+        </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Instagram</title>
+  <link href="/css/common.css" rel="stylesheet" type="text/css" />
+  <link href="/css/signup.css" rel="stylesheet" type="text/css" />
+  <link href="/css/detail.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="/img/favicon.png">
+  <link rel="instagram-icon" href="/img/favicon.png">
+</head>
+<body>
+<div class="container">
+  <img href="/" class="logo_instagram" src="/img/logo_text.png" alt="instagram_logo">
+  <h2 class="detail_h2">회원 수정</h2>
+  <div th:if="${param.status}" th:text="'수정 완료'"></div>
+  <form action="member.html" th:action method="post">
+    <div>
+      <label for="memberId">회원 ID</label>
+      <input type="text" class="input_signup" id="memberId" name="memberId"
+             value="1" th:value="${user.id}" readonly>
+    </div>
+    <div>
+      <label for="username">회원 이름</label>
+      <input type="text" class="input_signup" id="username" name="username"
+             value="홍길동" th:value="${user.username}" readonly>
+    </div>
+    <div>
+      <label for="password">비밀번호</label>
+      <input type="text" class="input_signup" id="password" name="password">
+    </div>
+    <div>
+      <label for="email">email</label>
+      <input type="text" class="input_signup" id="email" name="email"
+             value="abc@gmail.com" th:value="${user.email}">
+    </div>
+    <div>
+      <label for="phone">phone</label>
+      <input type="text" class="input_signup" id="phone" name="phone"
+             value="010-1234-5678" th:value="${user.phone}">
+    </div>
+    <div>
+      <button  id="btn_login" type="submit" >저장</button>
+    </div>
+  </form>
+
+</div> <!-- /container -->
+<div class="option">
+  <a class="option1" href="/instagram/page">메인 화면</a>
+</div>
+</body>
+</html>

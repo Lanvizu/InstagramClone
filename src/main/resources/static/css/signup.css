@@ -1,0 +1,19 @@
+.input_signup {
+    width: 270px;
+    height: 40px;
+    margin: 3px auto;
+    padding: 0 10px;
+    display: block;
+    background-color: #fafafa;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.input_signup::placeholder {
+    font-size: 12px;
+    color: #8e8e8e;
+}
+.input_signup:focus {
+    border: 1px solid #8a8a8a;
+    outline: none;
+}

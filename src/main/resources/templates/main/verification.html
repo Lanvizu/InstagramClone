@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link href="/css/common.css" rel="stylesheet" type="text/css" />
+  <link href="/css/signup.css" rel="stylesheet" type="text/css" />
+  <link href="/css/detail.css" rel="stylesheet" type="text/css" />
+  <title>Instagram</title>
+  <link rel="icon" href="/img/favicon.png">
+  <link rel="instagram-icon" href="/img/favicon.png">
+</head>
+<body>
+<div class="container">
+  <img class="logo_instagram" src="/img/logo_text.png" alt="instagram_logo">
+<!--  <div>-->
+<!--    <label for="memberName">회원 이름</label>-->
+<!--    <input type="text" class="input_signup" id="memberName" name="memberName"-->
+<!--           value="홍길동" th:value="${user.username}" readonly>-->
+<!--  </div>-->
+  <h4 class="find1">비밀번호를 입력해주세요.</h4>
+  <form action="/verification" method="post">
+    <input type="text" class="input_login" id="password" name="password" placeholder="비밀번호">
+    <button type="submit" id="btn_findPw">정보 수정하기</button>
+  </form>
+
+<!--  <div>-->
+<!--    <button  id="btn_login" onclick="location.href='memberEditForm.html'"-->
+<!--             th:onclick="|location.href='@{/members/member/{memberId}/edit(memberId=${user.id})}'|"-->
+<!--             type="button">정보 수정</button>-->
+<!--  </div>-->
+</div>
+</body>

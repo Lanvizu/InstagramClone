@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link href="/css/common.css" rel="stylesheet" type="text/css" />
+  <link href="/css/login.css" rel="stylesheet" type="text/css" />
+  <title>Instagram</title>
+  <link rel="icon" href="/img/favicon.png">
+  <link rel="instagram-icon" href="/img/favicon.png">
+</head>
+<body>
+<div class="container">
+  <a href="/" ><img class="logo_instagram" src="/img/logo_text.png" alt="instagram_logo"></a>
+  <h4 class="find1">저장된 아이디</h4>
+  <table>
+    <tr th:each="member : ${members}">
+      <td><a href="member.html" th:href="@{/members/member/{memberId}(memberId=${member.id})}"
+             th:text="${member.id}">회원id</a></td>
+      <td><a href="member.html" th:href="@{|/members/member/${member.id}|}"
+             th:text="${member.username}">회원이름</a></td>
+    </tr>
+  </table>
+  <a class="button_forgot" href="/findPassword">비밀번호를 잊으셨나요?</a>
+</div>
+</body>
+
+
